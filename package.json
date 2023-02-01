@@ -1,0 +1,32 @@
+{
+	"name": "json_db_social_net",
+	"version": "1.0.0",
+	"description": "A JSON server with auth",
+	"author": "JanisDeveloper <janis@developer.lv>",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"bcrypt": "^5.0.1",
+		"body-parser": "^1.20.0",
+		"cors": "^2.8.5",
+		"express": "^4.18.1",
+		"express-session": "^1.17.3",
+		"faker": "latest",
+		"formidable": "^2.0.1",
+		"json-server": "latest",
+		"lodash": "latest",
+		"passport": "^0.6.0",
+		"passport-local": "^1.0.0",
+		"session-file-store": "^1.5.0",
+		"sharp": "^0.31.0",
+		"uuid": "^9.0.0"
+	},
+	"routes": "--routes routes.json",
+	"scripts": {
+		"generate and run-auth": "json-server generate.js ./db.json --port 5000 --routes routes.json",
+		"generate and run-prof": "json-server generate_prof.js ./db.json --port 5000",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev:server": "nodemon --ignore sessions/ server.js",
+		"json:server": "json-server --watch ./db.json --port 5000 --routes routes.json"
+	},
+	"devDependencies": {}
+}
